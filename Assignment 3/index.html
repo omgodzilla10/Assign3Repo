@@ -23,6 +23,10 @@
         contextShapes.fillStyle = "#ffff66";
         contextShapes.fillRect(70, 150, 150, 100);
         
+        /*Room on the right*/
+        contextShapes.fillStyle = "#eaea55";
+        contextShapes.fillRect(220, 175, 50, 65);
+                               
         /*Begin lines*/
         
         /*Left side of house*/
@@ -51,7 +55,18 @@
         
         contextShapes.fillStyle="#ffff88";
         contextShapes.fill();
+        
+        /*Roof of the second room*/
+        contextShapes.beginPath();
+        contextShapes.strokeStyle="#eaea55";
+        
+        contextShape.moveTo(220, 165);
+        contextShape.lineTo(250, 165);
+        contextShapes.stroke();
         contextShapes.endPath();
+        /*
+        contextShapes.fillStyle="#eaea55";
+        contextShapes.fill();*/
 		}
     
 </script>
