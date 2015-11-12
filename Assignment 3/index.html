@@ -23,23 +23,34 @@
         contextShapes.fillStyle = "#ffff66";
         contextShapes.fillRect(70, 150, 150, 100);
         
-        /*Draw lines*/
+        /*Begin lines*/
+        
+        /*Left side of house*/
         contextShapes.beginPath();
         contextShapes.strokeStyle="#ffffaa";
         
-        contextShapes.moveTo(70, 150);
-        contextShapes.lineTo(30, 130);
+        contextShapes.moveTo(70, 250);
         contextShapes.lineTo(30, 230);
-        contextShapes.lineTo(70, 250);
-        
+        contextShapes.lineTo(30, 130);
+        contextShapes.lineTo(50, 100);
+        contextShapes.lineTo(70, 150);
         contextShapes.stroke();
+        
         contextShapes.fillStyle="#ffffaa";
         contextShapes.fill();
         
-        contextShapes.moveTo(30, 130);
-        contextShapes.lineTo(60, 100);
-        contextShapes.lineTo(220, 100);
+        /*Roof*/
+        contextShapes.beginPath();
+        contextShapes.strokeStyle="#ffff22";
+        
+        contextShapes.moveTo(50, 100);
+        contextShapes.lineTo(200, 100);
+        contextShapes.lineTo(220, 150);
+        contextShapes.lineTo(70, 150);
         contextShapes.stroke();
+        
+        contextShapes.fillStyle="#ffff66";
+        contextShapes.fill();
         contextShapes.endPath();
 		}
     
