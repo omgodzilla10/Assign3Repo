@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Hoefsloot, Trevor Rosenlund, Matt</title>
+</head>
+    
+<script type="text/javascript">
+    
+	function drawShapes() {
+		var shapes = document.getElementById("house");
+		var contextShapes = shapes.getContext("2d");
+		
+        /*Grass*/
+		contextShapes.fillStyle = "#33FF33";
+		contextShapes.fillRect(0, 225, 300, 75);
+        
+        /*Sky*/
+        contextShapes.fillStyle = "#7777FF";
+		contextShapes.fillRect(0, 0, 300, 225);
+        
+        /*House*/
+        contextShapes.fillStyle = "#ffff66";
+        contextShapes.fillRect(70, 150, 150, 100);
+        
+        /*Draw lines*/
+        contextShapes.beginPath();
+        contextShapes.strokeStyle="#ffffaa";
+        
+        contextShapes.moveTo(70, 150);
+        contextShapes.lineTo(30, 130);
+        contextShapes.lineTo(30, 230);
+        contextShapes.lineTo(70, 250);
+        
+        contextShapes.stroke();
+        contextShapes.fillStyle="#ffffaa";
+        contextShapes.fill();
+        contextShapes.endPath();
+        
+        contex
+		}
+    
+</script>
+    
+<body onLoad="drawShapes()">
+    <canvas id="house" width="300" height="300" style="border:1px solid #000000;">Test</canvas>
+</body>
+</html>
