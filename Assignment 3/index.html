@@ -24,7 +24,7 @@
         contextShapes.fillRect(70, 150, 150, 100);
         
         /*Room on the right*/
-        contextShapes.fillStyle = "#eaea55";
+        contextShapes.fillStyle = "#eeee44";
         contextShapes.fillRect(220, 175, 50, 65);
                                
         /*Begin lines*/
@@ -38,7 +38,9 @@
         contextShapes.lineTo(30, 130);
         contextShapes.lineTo(50, 100);
         contextShapes.lineTo(70, 150);
+        
         contextShapes.stroke();
+        contextShapes.closePath();
         
         contextShapes.fillStyle="#ffffaa";
         contextShapes.fill();
@@ -51,22 +53,27 @@
         contextShapes.lineTo(200, 100);
         contextShapes.lineTo(220, 150);
         contextShapes.lineTo(70, 150);
+        
         contextShapes.stroke();
+        contextShapes.closePath();
         
         contextShapes.fillStyle="#ffff88";
         contextShapes.fill();
         
         /*Roof of the second room*/
         contextShapes.beginPath();
-        contextShapes.strokeStyle="#eaea55";
+        contextShapes.strokeStyle="#eaea44";
         
-        contextShape.moveTo(220, 165);
-        contextShape.lineTo(250, 165);
+        contextShapes.moveTo(220, 150);
+        contextShapes.lineTo(250, 150);
+        contextShapes.lineTo(270, 175);
+        contextShapes.lineTo(220, 175);
+        
         contextShapes.stroke();
-        contextShapes.endPath();
-        /*
-        contextShapes.fillStyle="#eaea55";
-        contextShapes.fill();*/
+        contextShapes.closePath();
+
+        contextShapes.fillStyle="#e2e237";
+        contextShapes.fill();
 		}
     
 </script>
