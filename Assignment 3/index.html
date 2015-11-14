@@ -47,7 +47,8 @@
         
         /*Roof*/
         contextShapes.beginPath();
-        contextShapes.strokeStyle="#F9F995";
+        contextShapes.strokeStyle="#f5c73d";
+        contextShapes.lineWidth=2;
         
         contextShapes.moveTo(50, 100);
         contextShapes.lineTo(200, 100);
@@ -59,6 +60,36 @@
         
         contextShapes.fillStyle="#ffff88";
         contextShapes.fill();
+        
+        /*Left side of roof*/
+        
+        contextShapes.beginPath();
+        contextShapes.strokeStyle="ffff66";
+        
+        contextShapes.moveTo(72, 152);
+        contextShapes.lineTo(50, 100);
+        contextShapes.lineTo(27, 150);
+        contextShapes.lineTo(30, 150);
+        contextShapes.lineTo(50, 106);
+        contextShapes.lineTo(69, 152);
+        contextShapes.lineTo(72, 152);
+        
+        contextShapes.stroke();
+        contextShapes.closePath();
+        
+        contextShapes.fillStyle="#FFFFAF";
+        contextShapes.fill();
+        
+        /*Shadow under roof*/
+        contextShapes.beginPath();
+        contextShapes.strokeStyle="ffff66";
+        contextShapes.lineWidth=2;
+        
+        contextShapes.moveTo(31, 149);
+        contextShapes.lineTo(50, 108);
+        
+        contextShapes.stroke();
+        contextShapes.closePath();
         
         /*Roof of the second room*/
         contextShapes.beginPath();
