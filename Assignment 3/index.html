@@ -20,7 +20,7 @@
 		contextShapes.fillRect(0, 0, 300, 225);
         
         /*House*/
-        contextShapes.fillStyle = "#ffff66";
+        contextShapes.fillStyle = "#FFE97F";
         contextShapes.fillRect(70, 150, 150, 100);
         
         /*Room on the right*/
@@ -47,7 +47,7 @@
         
         /*Roof*/
         contextShapes.beginPath();
-        contextShapes.strokeStyle="#ffff88";
+        contextShapes.strokeStyle="#F9F995";
         
         contextShapes.moveTo(50, 100);
         contextShapes.lineTo(200, 100);
@@ -77,7 +77,7 @@
         
         /*Door Frame*/
         contextShapes.beginPath();
-        contextShapes.strokeStyle="#d57311";
+        contextShapes.strokeStyle="#edc85f";
         
         contextShapes.moveTo(132, 250);
         contextShapes.lineTo(132, 207);
@@ -88,20 +88,20 @@
         contextShapes.stroke();
         contextShapes.closePath();
         
-        contextShapes.fillStyle="#f0c442";
+        contextShapes.fillStyle="#edc85f";
         contextShapes.fill();
-        
+        /*
         contextShapes.beginPath();
         
         contextShapes.moveTo(131, 250);
         contextShapes.lineTo(131, 206);
         
         contextShapes.stroke();
-        contextShapes.closePath();
+        contextShapes.closePath();*/
         
         /*Door*/
         contextShapes.beginPath();
-        contextShapes.strokeStyle="#ca8c2b";
+        contextShapes.strokeStyle="#ffd966";
         
         contextShapes.moveTo(156, 250);
         contextShapes.lineTo(134, 250);
@@ -112,7 +112,67 @@
         contextShapes.stroke();
         contextShapes.closePath();
         
-        contextShapes.fillStyle="#ca8c32";
+        contextShapes.fillStyle="#fad051";
+        contextShapes.fill();
+        
+        /*Door Panels*/
+        
+        /*Top left*/
+        contextShapes.beginPath();
+        contextShapes.strokeStyle="#dca656";
+        
+        contextShapes.moveTo(137, 215);
+        contextShapes.lineTo(143, 215);
+        contextShapes.lineTo(143, 225);
+        contextShapes.lineTo(137, 225);
+        contextShapes.lineTo(137, 215);
+        
+        contextShapes.stroke();
+        contextShapes.closePath();
+        
+        contextShapes.fillStyle="#ffd34d";
+        contextShapes.fill();
+        
+        /*Top right*/
+        contextShapes.beginPath();
+        
+        contextShapes.moveTo(147, 215);
+        contextShapes.lineTo(153, 215);
+        contextShapes.lineTo(153, 225);
+        contextShapes.lineTo(147, 225);
+        contextShapes.lineTo(147, 215);
+        
+        contextShapes.stroke();
+        contextShapes.closePath();
+        
+        contextShapes.fill();
+        
+        /*Bottom left*/
+        contextShapes.beginPath();
+        
+        contextShapes.moveTo(137, 231);
+        contextShapes.lineTo(143, 231);
+        contextShapes.lineTo(143, 248);
+        contextShapes.lineTo(137, 248);
+        contextShapes.lineTo(137, 231);
+        
+        contextShapes.stroke();
+        contextShapes.closePath();
+        
+        contextShapes.fill();
+        
+        /*Bottom right*/
+        contextShapes.beginPath();
+        
+        contextShapes.moveTo(147, 231);
+        contextShapes.lineTo(153, 231);
+        contextShapes.lineTo(153, 248);
+        contextShapes.lineTo(147, 248);
+        contextShapes.lineTo(147, 231);
+        
+        contextShapes.stroke();
+        contextShapes.closePath();
+        
         contextShapes.fill();
 		}
     
