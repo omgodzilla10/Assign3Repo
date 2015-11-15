@@ -38,6 +38,7 @@
         contextShapes.lineTo(30, 150);
         contextShapes.lineTo(50, 100);
         contextShapes.lineTo(70, 150);
+        contextShapes.lineTo(70, 250);
         
         contextShapes.stroke();
         contextShapes.closePath();
@@ -62,7 +63,6 @@
         contextShapes.fill();
         
         /*Left side of roof*/
-        
         contextShapes.beginPath();
         contextShapes.strokeStyle="ffff66";
         
@@ -287,7 +287,6 @@
         contextShapes.beginPath();
         contextShapes.strokeStyle="#edc85f";
         
-        
         contextShapes.moveTo(90, 190);
         contextShapes.lineTo(90, 160);
         contextShapes.lineTo(110, 160);
@@ -297,6 +296,38 @@
         contextShapes.stroke();
         contextShapes.closePath();
         
+        contextShapes.fill();
+        
+        /*Left side of building*/
+        contextShapes.beginPath();
+        contextShapes.strokeStyle="#edc85f";
+        contextShapes.lineWidth=1;
+        
+        contextShapes.moveTo(43, 162);
+        contextShapes.lineTo(55, 158);
+        contextShapes.lineTo(55, 189);
+        contextShapes.lineTo(43, 184);
+        contextShapes.lineTo(43, 162);
+        
+        contextShapes.stroke();
+        contextShapes.closePath();
+        
+        contextShapes.fill();
+        
+        /*Right building*/
+        contextShapes.beginPath();
+        contextShapes.strokeStyle="#edc85f";
+        
+        contextShapes.moveTo(235, 192);
+        contextShapes.lineTo(252, 192);
+        contextShapes.lineTo(252, 219);
+        contextShapes.lineTo(235, 219);
+        contextShapes.lineTo(235, 192);
+        
+        contextShapes.stroke();
+        contextShapes.closePath();
+        
+        contextShapes.fillStyle="#dfecec";
         contextShapes.fill();
 		}
     
