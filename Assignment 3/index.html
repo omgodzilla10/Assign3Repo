@@ -24,7 +24,7 @@
         contextShapes.fillRect(70, 150, 150, 100);
         
         /*Room on the right*/
-        contextShapes.fillStyle = "#eeee44";
+        contextShapes.fillStyle = "#ffe04d";
         contextShapes.fillRect(220, 175, 50, 65);
                                
         /*Begin lines*/
@@ -93,7 +93,7 @@
         
         /*Roof of the second room*/
         contextShapes.beginPath();
-        contextShapes.strokeStyle="#eaea44";
+        contextShapes.strokeStyle="#ffe466";
         
         contextShapes.moveTo(220, 150);
         contextShapes.lineTo(250, 150);
@@ -103,12 +103,33 @@
         contextShapes.stroke();
         contextShapes.closePath();
 
-        contextShapes.fillStyle="#e2e237";
+        contextShapes.fillStyle="#ffe466";
         contextShapes.fill();
+        
+        /*Shadow under second roof*/
+        contextShapes.beginPath();
+        contextShapes.strokeStyle="#ffd200";
+        
+        contextShapes.moveTo(220, 176);
+        contextShapes.lineTo(271, 176);
+        
+        contextShapes.stroke();
+        contextShapes.closePath();
+        
+        contextShapes.beginPath();
+        contextShapes.strokeStyle="#ffd200";
+        contextShapes.lineWidth=1;
+        
+        contextShapes.moveTo(220, 178);
+        contextShapes.lineTo(270, 178);
+        
+        contextShapes.stroke();
+        contextShapes.closePath();
         
         /*Door Frame*/
         contextShapes.beginPath();
         contextShapes.strokeStyle="#edc85f";
+        contextShapes.lineWidth=2;
         
         contextShapes.moveTo(132, 250);
         contextShapes.lineTo(132, 207);
@@ -121,14 +142,6 @@
         
         contextShapes.fillStyle="#edc85f";
         contextShapes.fill();
-        /*
-        contextShapes.beginPath();
-        
-        contextShapes.moveTo(131, 250);
-        contextShapes.lineTo(131, 206);
-        
-        contextShapes.stroke();
-        contextShapes.closePath();*/
         
         /*Door*/
         contextShapes.beginPath();
