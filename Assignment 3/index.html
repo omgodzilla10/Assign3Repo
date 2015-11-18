@@ -7,12 +7,14 @@
     
 <script type="text/javascript">
     
-    var smoke = [[160, 65, 5, 1], [160, 65, 6, 1], [175, 50, 9, 0.9], [190, 35, 11, 0.8], [210, 15, 13, 0.7]];
+    //var smoke = [[160, 65, 5, 1], [160, 65, 6, 1], [175, 50, 9, 0.8], [190, 35, 11, 0.6], [210, 15, 13, 0.4]];
+    var smoke = [[160, 65, 5, 1], [160, 65, 5, 1], [165, 55, 6, 0.9], [170, 50, 7, 0.8], [175, 45, 8, 0.7], [180, 40, 9, 0.6], [185, 35, 10, 0.5], [190, 30, 11, 0.4], [190, 30, 12, 0.3], [195, 25, 13, 0.2]];
     
     var drawShapes = function() {
         contextShapes = document.getElementById('house').getContext('2d');
         
-        var interval = setInterval(draw, 100);        
+        var interval = setInterval(draw, 100);
+        
     }
     
     var draw = function() {
@@ -54,6 +56,22 @@
         contextShapes.closePath();
         
         contextShapes.fillStyle="#ffffaa";
+        contextShapes.fill();
+        
+        /*Chimney*/
+        contextShapes.beginPath();
+        contextShapes.strokeStyle="#f5c73d";
+        contextShapes.lineWidth=2;
+        
+        contextShapes.moveTo(155, 100);
+        contextShapes.lineTo(155, 65);
+        contextShapes.lineTo(165, 65);
+        contextShapes.lineTo(165, 100);
+        
+        contextShapes.stroke();
+        contextShapes.closePath();
+        
+        contextShapes.fillStyle="#ffff88";
         contextShapes.fill();
         
         /*Roof*/
@@ -358,8 +376,8 @@ var animateSmoke = function() {
         
         smoke[a][0] += Math.floor((Math.random() * 2) + 1);
         smoke[a][1] -= Math.floor((Math.random() * 2) + 1);
-        smoke[a][2] += 0.3;
-        smoke[a][3] -= (Math.random() * 3)* 0.01) + 0.03);
+        smoke[a][2] += 0.4;
+        smoke[a][3] -= 0.02;
 
         if(smoke[a][3] < 0){
             smoke[a][0] = smoke[0][0];
