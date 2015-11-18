@@ -7,10 +7,20 @@
     
 <script type="text/javascript">
     
-	function drawShapes() {
-		var shapes = document.getElementById("house");
-		var contextShapes = shapes.getContext("2d");
-		
+    var smoke = [[160, 65, 5, 1], [160, 65, 6, 1], [175, 50, 9, 0.9], [190, 35, 11, 0.8], [210, 15, 13, 0.7]];
+    
+    var drawShapes = function() {
+        contextShapes = document.getElementById('house').getContext('2d');
+        
+        var interval = setInterval(draw, 100);        
+    }
+    
+    var draw = function() {
+        house();
+        animateSmoke();
+    }
+    
+	var house = function() {		
         /*Grass*/
 		contextShapes.fillStyle = "#33FF33";
 		contextShapes.fillRect(0, 225, 300, 75);
@@ -102,7 +112,6 @@
         
         contextShapes.stroke();
         contextShapes.closePath();
-
         contextShapes.fillStyle="#ffe466";
         contextShapes.fill();
         
@@ -330,6 +339,37 @@
         contextShapes.fillStyle="#dfecec";
         contextShapes.fill();
 		}
+        
+var animateSmoke = function() {
+    
+    /*Begin Drawing Smoke clouds*/
+        
+    for (var i=1; i<smoke.length; i++){
+        contextShapes.beginPath();
+        contextShapes.arc(smoke[i][0], smoke[i][1], smoke[i][2] , 0, 2*Math.PI);
+        contextShapes.lineWidth = 0;
+        contextShapes.strokeStyle = "rgba(255, 255, 255, 0)";
+        contextShapes.stroke();
+        contextShapes.fillStyle =  "rgba(255, 255, 255, "+smoke[i][3]+")";
+        contextShapes.fill();
+    }
+    
+    for (var a=1; a<smoke.length; a++){
+        
+        smoke[a][0] += Math.floor((Math.random() * 2) + 1);
+        smoke[a][1] -= Math.floor((Math.random() * 2) + 1);
+        smoke[a][2] += 0.3;
+        smoke[a][3] -= (Math.random() * 3)* 0.01) + 0.03);
+
+        if(smoke[a][3] < 0){
+            smoke[a][0] = smoke[0][0];
+            smoke[a][1] = smoke[0][1];
+            smoke[a][2] = smoke[0][2];
+            smoke[a][3] = smoke[0][3];
+        }
+    }
+    
+}
     
 </script>
     
