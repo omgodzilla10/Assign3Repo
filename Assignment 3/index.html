@@ -58,21 +58,34 @@
         contextShapes.fillStyle="#ffffaa";
         contextShapes.fill();
         
-        -        /*Chimney*/
--        contextShapes.beginPath();
--        contextShapes.strokeStyle="#f5c73d";
--        contextShapes.lineWidth=2;
--        
--        contextShapes.moveTo(155, 100);
--        contextShapes.lineTo(155, 65);
--        contextShapes.lineTo(165, 65);
--        contextShapes.lineTo(165, 100);
--        
--        contextShapes.stroke();
--        contextShapes.closePath();
--        
--        contextShapes.fillStyle="#ffff88";
--        contextShapes.fill();
+        /*Chimney*/
+        contextShapes.beginPath();
+        contextShapes.strokeStyle="#f5c73d";
+        
+        contextShapes.moveTo(155, 100);
+        contextShapes.lineTo(155, 75);
+        contextShapes.lineTo(165, 75);
+        contextShapes.lineTo(165, 100);
+        
+        contextShapes.stroke();
+        contextShapes.closePath();
+        
+        contextShapes.fillStyle="#ffff88";
+        contextShapes.fill();
+        
+        /*Chimney left side */
+        contextShapes.beginPath();
+        
+        contextShapes.moveTo(155, 100);
+        contextShapes.lineTo(152, 100);
+        contextShapes.lineTo(152, 78);
+        contextShapes.lineTo(155, 75);
+        
+        contextShapes.stroke();
+        contextShapes.closePath();
+        
+        contextShapes.fillStyle="#fbd76a";
+        contextShapes.fill();
         
         /*Roof*/
         contextShapes.beginPath();
