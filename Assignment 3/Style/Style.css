@@ -1,11 +1,14 @@
 body{
-    text-align: center;
     background-color: lightblue;
 }
 
 h2 {
     background-color: black;
     color: white;
+}
+
+h4 {
+    margin: auto;
 }
 
 canvas {
@@ -15,5 +18,10 @@ canvas {
 p{
     font-family: arial;
     font-size: 0.6em;
-    margin: 10px 150px;
+}
+
+#pageContainer {
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
 }
