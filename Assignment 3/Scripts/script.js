@@ -1,5 +1,6 @@
 "use strict";
 
+/*Array for smoke in the format of [x, y, width, opacity]*/
 var smoke = [[160, 65, 5, 1], [160, 65, 5, 1], [165, 55, 6, 0.9], [170, 50, 7, 0.8], [175, 45, 8, 0.7], [180, 40, 9, 0.6], [185, 35, 10, 0.5], [190, 30, 11, 0.4], [190, 30, 12, 0.3], [195, 25, 13, 0.2]];
 
 function house() {
@@ -357,7 +358,7 @@ function animateSmoke() {
     var contextShapes = document.getElementById("houseCanvas").getContext("2d"),
         i;
     
-    /*Begin Drawing Smoke clouds*/
+    /*Drawing all Smoke clouds from the array*/
     for (i = 1; i < smoke.length; i = i + 1) {
         contextShapes.beginPath();
         contextShapes.arc(smoke[i][0], smoke[i][1], smoke[i][2], 0, 2 * Math.PI);
@@ -367,17 +368,18 @@ function animateSmoke() {
         contextShapes.fillStyle = "rgba(255, 255, 255, " + smoke[i][3] + ")";
         contextShapes.fill();
     }
-
+    /*Incrementing/decrementing smoke x, y and width*/
     for (i = 1; i < smoke.length; i = i + 1) {
-
         smoke[i][0] += Math.floor((Math.random() * 2) + 1);
         smoke[i][1] -= Math.floor((Math.random() * 2) + 1);
         smoke[i][2] += 0.4;
-
+        
+        /*decrementing opacity of the smoke clouds*/
         if (smoke[i][1] < 35) {
             smoke[i][3] -= 0.1;
         }
-
+        
+        /*Resetting x,y,width,opacity for smoke when they disappear*/
         if (smoke[i][3] < 0) {
             smoke[i][0] = smoke[0][0];
             smoke[i][1] = smoke[0][1];
